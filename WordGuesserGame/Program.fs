@@ -4,8 +4,6 @@ open System
 
 module Program = 
 
-   let words = ["esbjerg";"varde";"ribe";"bramming"]
-
    let randomGenerator = Random()
 
 
@@ -16,7 +14,6 @@ module Program =
 
    // return the amount of chars equals to Config.HIDDEN in [word]
    let HiddenCount word = (String.filter (fun ch -> ch = Config.HIDDEN) word).Length
-
 
    // Run the game once where the word to guess is [word]
    let OneGame word = 
@@ -37,8 +34,13 @@ module Program =
    let main argv =
        let mutable goOn = true
        printfn "Word guesser ver 0.1 "
+
+       let word = Config.WORDS.[randomGenerator.Next(Config.WORDS.Length)]
+       
+       let hiddenWord = if Config.CASE_SENSITIVE then word else word.ToLower()
+
        while goOn do
-          OneGame Config.WORDS.[randomGenerator.Next(Config.WORDS.Length)]
+          OneGame hiddenWord
           printf "Try again?"
           let ch = Console.ReadLine() |> char
           goOn <- ch <> 'n'

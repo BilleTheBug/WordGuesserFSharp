@@ -12,4 +12,4 @@ module Config =
 
   let MULTIPLE = false
 
-  let WORDS = ["esbjerg";"varde";"ribe";"bramming"]
+  let WORDS = ["Esbjerg";"Varde";"Ribe";"Bramming"]
