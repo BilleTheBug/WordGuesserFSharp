@@ -1,0 +1,8 @@
+C:\Users\drive\source\repos\WordGuesserGame\WordGuesserGame\bin\Debug\netcoreapp2.1\WordGuesserGame.deps.json
+C:\Users\drive\source\repos\WordGuesserGame\WordGuesserGame\bin\Debug\netcoreapp2.1\WordGuesserGame.runtimeconfig.json
+C:\Users\drive\source\repos\WordGuesserGame\WordGuesserGame\bin\Debug\netcoreapp2.1\WordGuesserGame.runtimeconfig.dev.json
+C:\Users\drive\source\repos\WordGuesserGame\WordGuesserGame\bin\Debug\netcoreapp2.1\WordGuesserGame.dll
+C:\Users\drive\source\repos\WordGuesserGame\WordGuesserGame\bin\Debug\netcoreapp2.1\WordGuesserGame.pdb
+C:\Users\drive\source\repos\WordGuesserGame\WordGuesserGame\obj\Debug\netcoreapp2.1\WordGuesserGame.fsprojAssemblyReference.cache
+C:\Users\drive\source\repos\WordGuesserGame\WordGuesserGame\obj\Debug\netcoreapp2.1\WordGuesserGame.dll
+C:\Users\drive\source\repos\WordGuesserGame\WordGuesserGame\obj\Debug\netcoreapp2.1\WordGuesserGame.pdb
