@@ -16,8 +16,11 @@
     let HiddenWord word guesses = String.map(fun ch -> if List.contains ch guesses then ch else Config.HIDDEN) word 
 
     let StringContains (str : string) (guess : string) = match str.IndexOf(guess) with 
-                                                            | -1 -> false
-                                                            | _ -> true                          
+                                                            | -1 -> ""
+                                                            | _ ->  let startIndex = str.IndexOf(guess) 
+                                                                    for i in 0..guess.Length do
+                                                                       str.[startIndex + i] = guess.[i]
+                                                                    str
 
     // return the amount of chars equals to Config.HIDDEN in [word]
     let HiddenCount word = (String.filter (fun ch -> ch = Config.HIDDEN) word).Length

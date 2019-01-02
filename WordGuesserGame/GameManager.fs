@@ -33,8 +33,7 @@
 
         while goOn do
         //word <- if Config.CASE_SENSITIVE then getRandomWord else getRandomWord.ToLower()
-            let mutable word = GetWord
-            OneGame word
+            OneGame (GetWord())
             let mutable invalidInput = true
             while invalidInput do 
                 printf "Try again?"
