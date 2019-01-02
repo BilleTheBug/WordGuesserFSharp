@@ -10,17 +10,12 @@
         | true -> Help hiddenWord word
         | false -> randomChar
 
-    let StringContains (word : string) (hiddenWord: string) (guess : string) = match word.IndexOf(guess) with 
-                                                            | -1 -> ""
-                                                            | _ ->  let startIndex = word.IndexOf(guess) 
-                                                                    for i in 0..guess.Length do
-                                                                       hiddenWord.[startIndex + i] <- guess.[i]
-                                                                    hiddenWord
-
-    let s4 = 
-      ( let sb = new System.Text.StringBuilder()
-        for i in 0 .. 25000 do sb.Append(fun ch -> ) |> ignore
-        sb.ToString() )
+    //let StringContains (word : string) (hiddenWord: string) (guess : string) = match word.IndexOf(guess) with 
+    //                                                        | -1 -> ""
+    //                                                        | _ ->  let startIndex = word.IndexOf(guess) 
+    //                                                                for i in 0..guess.Length do
+    //                                                                   hiddenWord.[startIndex + i] <- guess.[i]
+    //                                                                hiddenWord
 
     // return the amount of chars equals to Config.HIDDEN in [word]
     let HiddenCount word = (String.filter (fun ch -> ch = Config.HIDDEN) word).Length

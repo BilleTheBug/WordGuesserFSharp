@@ -14,3 +14,4 @@ C:\Users\Greis\Documents\GitHub\projects\FSharp\WordGuesserFSharp\WordGuesserGam
 C:\Users\Greis\Documents\GitHub\projects\FSharp\WordGuesserFSharp\WordGuesserGame\obj\Debug\netcoreapp2.1\WordGuesserGame.AssemblyInfo.fs
 C:\Users\Greis\Documents\GitHub\projects\FSharp\WordGuesserFSharp\WordGuesserGame\obj\Debug\netcoreapp2.1\WordGuesserGame.dll
 C:\Users\Greis\Documents\GitHub\projects\FSharp\WordGuesserFSharp\WordGuesserGame\obj\Debug\netcoreapp2.1\WordGuesserGame.pdb
+C:\Users\Greis\Documents\GitHub\projects\FSharp\WordGuesserFSharp\WordGuesserGame\obj\Debug\netcoreapp2.1\WordGuesserGame.fsprojAssemblyReference.cache
