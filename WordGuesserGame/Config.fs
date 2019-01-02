@@ -10,4 +10,6 @@
 
   let MULTIPLE = false
 
-  let WORDS = List.concat [WordType.CITIES;WordType.NAMES;WordType.MOVIES]
+  let WORDS_WITHOUT_SPACES = List.concat [WordType.CITIES;WordType.NAMES]
+
+  let WORDS = List.concat [WordType.CITIES;WordType.NAMES; WordType.MOVIES]
