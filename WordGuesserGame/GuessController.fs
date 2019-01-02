@@ -10,17 +10,17 @@
         | true -> Help hiddenWord word
         | false -> randomChar
 
-
-    // Return a string based on [word] where all char's NOT in [guesses] will be replaced with
-    // Config.HIDDEN
-    let HiddenWord word guesses = String.map(fun ch -> if List.contains ch guesses then ch else Config.HIDDEN) word 
-
-    let StringContains (str : string) (guess : string) = match str.IndexOf(guess) with 
+    let StringContains (word : string) (hiddenWord: string) (guess : string) = match word.IndexOf(guess) with 
                                                             | -1 -> ""
-                                                            | _ ->  let startIndex = str.IndexOf(guess) 
+                                                            | _ ->  let startIndex = word.IndexOf(guess) 
                                                                     for i in 0..guess.Length do
-                                                                       str.[startIndex + i] = guess.[i]
-                                                                    str
+                                                                       hiddenWord.[startIndex + i] <- guess.[i]
+                                                                    hiddenWord
+
+    let s4 = 
+      ( let sb = new System.Text.StringBuilder()
+        for i in 0 .. 25000 do sb.Append(fun ch -> ) |> ignore
+        sb.ToString() )
 
     // return the amount of chars equals to Config.HIDDEN in [word]
     let HiddenCount word = (String.filter (fun ch -> ch = Config.HIDDEN) word).Length
