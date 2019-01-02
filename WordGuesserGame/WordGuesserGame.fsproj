@@ -6,8 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="WordType.fs" />
     <Compile Include="Config.fs" />
+    <Compile Include="GuessController.fs" />
+    <Compile Include="WordGenerator.fs" />
+    <Compile Include="GameManager.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
+
+  <ItemGroup />
 
 </Project>

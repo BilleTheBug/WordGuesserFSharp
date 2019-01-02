@@ -1,6 +1,4 @@
-﻿namespace Console
-
-module Config =
+﻿module Config
 
   let HIDDEN = '*'
   
@@ -12,4 +10,4 @@ module Config =
 
   let MULTIPLE = false
 
-  let WORDS = ["Esbjerg";"Varde";"Ribe";"Bramming"]
+  let WORDS = List.concat [WordType.CITIES;WordType.NAMES;WordType.MOVIES]
