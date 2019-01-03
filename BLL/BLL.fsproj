@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="WordType.fs" />
+    <Compile Include="Config.fs" />
+    <Compile Include="WordGenerator.fs" />
+    <Compile Include="GuessController.fs" />
+  </ItemGroup>
+
+</Project>

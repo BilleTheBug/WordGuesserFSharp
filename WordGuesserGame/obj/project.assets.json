@@ -260,6 +260,19 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "FSharp.Core": "4.5.2"
+        },
+        "compile": {
+          "bin/placeholder/BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BLL.dll": {}
+        }
       }
     }
   },
@@ -780,10 +793,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "BLL/1.0.0": {
+      "type": "project",
+      "path": "../BLL/BLL.fsproj",
+      "msbuildProject": "../BLL/BLL.fsproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "BLL >= 1.0.0",
       "FSharp.Core >= 4.5.2",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
@@ -795,9 +814,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\drive\\source\\repos\\WordGuesserGame\\WordGuesserGame\\WordGuesserGame.fsproj",
-      "projectName": "WordGuesserGame",
-      "projectPath": "C:\\Users\\drive\\source\\repos\\WordGuesserGame\\WordGuesserGame\\WordGuesserGame.fsproj",
+      "projectUniqueName": "C:\\Users\\drive\\source\\repos\\WordGuesserGame\\WordGuesserGame\\UserInterface.fsproj",
+      "projectName": "UserInterface",
+      "projectPath": "C:\\Users\\drive\\source\\repos\\WordGuesserGame\\WordGuesserGame\\UserInterface.fsproj",
       "packagesPath": "C:\\Users\\drive\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\drive\\source\\repos\\WordGuesserGame\\WordGuesserGame\\obj\\",
       "projectStyle": "PackageReference",
@@ -817,7 +836,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\drive\\source\\repos\\WordGuesserGame\\BLL\\BLL.fsproj": {
+              "projectPath": "C:\\Users\\drive\\source\\repos\\WordGuesserGame\\BLL\\BLL.fsproj"
+            }
+          }
         }
       }
     },

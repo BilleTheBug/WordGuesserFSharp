@@ -5,6 +5,7 @@
     open WordGenerator
 
     // returns user input from console. 
+    //If [caseSens] is false, the input is returned in all lower case
     let GetInput caseSens : string = 
         let input = Console.ReadLine()  
         if caseSens then input else input.ToLower()
