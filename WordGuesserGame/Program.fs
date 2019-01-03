@@ -6,7 +6,7 @@ module Program =
 
     [<EntryPoint>]
 
-    //Launches the game logic
+    //Launches the console
     let main argv =
         StartGame
         0
