@@ -6,9 +6,7 @@
 
   let ALLOW_BLANKS = false
 
-
-  //Skal vi fjerne den, eller refakturere til at Help metoden kun kan kaldes, når HELP er true?
-  let HELP = false
+  let HELP = true
 
   let MULTIPLE = false
 

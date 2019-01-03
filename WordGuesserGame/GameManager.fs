@@ -15,15 +15,16 @@
         let mutable guesses = [] 
 
         while HiddenCount (HiddenWord word guesses) > 0 do
-            printfn "Word: %s, guesses %A" (HiddenWord word guesses) guesses
+            printfn "Word: %s, guesses %A, attemps %i" (HiddenWord word guesses) guesses counter
             let guess = GetInput Config.CASE_SENSITIVE |> string
-            match guess.Length with
-            | 1 -> guesses <- List.distinct (guesses @ [guess |> char]);counter <- counter+1
-            | _ -> 
-            match guess with
-            | "crtl-h" -> guesses <- List.distinct (guesses @ [Help (HiddenWord word guesses) word] );counter <- counter+1
-            | _ -> printfn "Your input was invalid."
-
+            if guess.Length = 1 
+            then guesses <- List.distinct (guesses @ [guess |> char]);counter <- counter+1
+            else match guess with
+                 | "crtl-h" -> if Config.HELP 
+                               then guesses <- List.distinct (guesses @ [Help (HiddenWord word guesses) word] );counter <- counter+1 
+                               else printfn "You are on your own."
+                 | _ -> printfn "Your input was invalid."
+  
         printfn "You guessed the word %s !!!!" word
         printfn "You guessed it in %d guesses..." counter
 
@@ -32,7 +33,6 @@
         printfn "Word guesser ver 0.1 "
 
         while goOn do
-        //word <- if Config.CASE_SENSITIVE then getRandomWord else getRandomWord.ToLower()
             OneGame (GetWord())
             let mutable invalidInput = true
             while invalidInput do 
