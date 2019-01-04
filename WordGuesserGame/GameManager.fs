@@ -17,7 +17,7 @@
         printfn "Enter any character and hit <enter> to guess."
         printfn "Enter 'crtl-h' and hit <enter> to get helped with a correct guess."
         printfn "To enable/disable settings, edit the Config file."
-        printfn "Current Configs:\nCASE SENSITIVITY -> %b\nHELP -> %b\nALLOW BLANKS -> %b\nMULTIPLE -> %b\nHIDDEN SYMBOL -> %c" 
+        printfn "Current Configs:\nCASE SENSITIVITY -> %b\nHELP -> %b\nALLOW BLANKS -> %b\nMULTIPLE -> %b\nHIDDEN SYMBOL -> %c\n" 
                                     CASE_SENSITIVE HELP ALLOW_BLANKS MULTIPLE HIDDEN
 
 
