@@ -3,12 +3,23 @@
     open System
     open GuessController
     open WordGenerator
+    open Config
 
     // returns user input from console. 
     //If [caseSens] is false, the input is returned in all lower case
     let GetInput caseSens : string = 
         let input = Console.ReadLine()  
         if caseSens then input else input.ToLower()
+
+    // Prints out help and configurations
+    let PrintHelp =
+        printfn "Word guesser v2.0"
+        printfn "Enter any character and hit <enter> to guess."
+        printfn "Enter 'crtl-h' and hit <enter> to get helped with a correct guess."
+        printfn "To enable/disable settings, edit the Config file."
+        printfn "Current Configs:\nCASE SENSITIVITY -> %b\nHELP -> %b\nALLOW BLANKS -> %b\nMULTIPLE -> %b\nHIDDEN SYMBOL -> %c" 
+                                    CASE_SENSITIVE HELP ALLOW_BLANKS MULTIPLE HIDDEN
+
 
     // Run the game once where the word to guess is [word]
     let OneGame word = 
@@ -29,10 +40,11 @@
         printfn "You guessed the word %s !!!!" word
         printfn "You guessed it in %d guesses..." counter
 
+    // Starts the word guesser game, continuously invoking OneGame with a new random word
+    // while mutable 'goOn' is true.
     let StartGame =
         let mutable goOn = true
-        printfn "Word guesser ver 0.1 "
-
+        PrintHelp |> ignore
         while goOn do
             OneGame (GetWord())
             let mutable invalidInput = true
